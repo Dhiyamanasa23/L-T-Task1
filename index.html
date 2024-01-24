@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+        <title>L&T</title>
+        <link rel="stylesheet" href="Style.css">
+        <script src="https://kit.fontawesome.com/ceb57a74b5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+           <div class="form-box">
+            <h1 id="title">Register</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <i class="fa-solid fa-user"></i>  
+                        <input type="text" placeholder="Name">
+
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email ID">
+                        
+                    </div>
+                    <div class="input-field" id="Phonenumber">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder="Phone Number">
+                        
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                        
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="RegisterBtn">Register</button>
+                    <button type="button" id="SignInBtn" class="disable">Sign In</button> 
+                </div>
+            </form>
+           </div> 
+        </div>
+<script>
+    let RegisterBtn=document.getElementById("RegisterBtn")
+    let SignInBtn=document.getElementById("SignInBtn")
+    let namefield=document.getElementById("namefield")
+    let Phonenumber=document.getElementById("Phonenumber")
+    let title=document.getElementById("title")
+SignInBtn.onclick = function()
+{
+    namefield.style.maxHeight="0";
+    Phonenumber.style.maxHeight="0";
+    title.innerHTML="Sign In";
+    RegisterBtn.ClassList.add("disable");
+    SignInBtn.classList.remove("disable");
+    
+}
+RegisterBtn.onclick = function()
+{
+    namefield.style.maxHeight="60px";
+    Phonenumber.style.maxHeight="60px";
+    title.innerHTML="Register";
+    RegisterBtn.ClassList.remove("disable");
+    SignInBtn.classList.add("disable");
+    
+}
+
+
+</script>
+
+    </body>
+</html>
